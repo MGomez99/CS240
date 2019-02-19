@@ -1,8 +1,8 @@
 #include "Planet.h"
 
-Planet::Planet(int distance, int id){
+Planet::Planet(int distance, int idnum){
 
-	this->id = id;
+	this->ID = idnum;
 	this->distance = distance;
 	this->pos = rand() % 360;
 	int randomType = rand() % 3; //to choose random type
@@ -19,9 +19,12 @@ Planet::Planet(int distance, int id){
 }
 
 int Planet::orbit(){
-	if(this->pos < 359){
-		this->pos++;}
-	else{
-		this->pos = 0;}
-	return this->pos;
+	if(this->pos == 359){
+		this->pos = 0;
+        return 0;
+    }
+	
+	this->pos++;
+    return this->pos;
+
 }

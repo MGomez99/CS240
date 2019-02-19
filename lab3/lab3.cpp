@@ -72,7 +72,6 @@ int main(){
 
 
     cerr << "\n\tTEST #5: Orbit Planets Still Works" << endl;
-
     //After calling orbit the planet's pos should be incremented by 1'
     for(int i = 0; i < NUM_PLANETS_TO_TEST; i++){
         Planet * temp = sun->getPlanet(all_ids[i]);
