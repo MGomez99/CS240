@@ -1,7 +1,7 @@
-#include <cstdlib>
-#include <iostream>
 #ifndef PLAB3_MG
 #define PLAB3_MG
+#include <cstdlib>
+#include <iostream>
 class Planet{
 	private:
 		int id;

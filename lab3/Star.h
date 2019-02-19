@@ -1,9 +1,8 @@
+#ifndef SLAB3_MG
+#define SLAB3_MG
 #include <cstdlib>
 #include <iostream>
 #include "Planet.h"
-#ifndef SLAB3_MG
-#define SLAB3_MG
-
 
 class Star{
 	private:
