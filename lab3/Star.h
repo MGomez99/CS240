@@ -14,11 +14,12 @@ class Star{
 		Star();
 		~Star();
 		int addPlanet();
-		Planet getFurthest();
+		//Planet getFurthest();
+		Planet * getPlanet(int);
+		bool removePlanet(int);
 		void orbit();
 		void printStarInfo();
 		int getCurrentNumPlanets(){return this->current_planets;}
-		int getMaxPlanets();
         //you may add any additional methodas you may need.
 };
 #endif

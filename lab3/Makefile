@@ -8,10 +8,11 @@ $(s):
 	g++ $(CFLAGS) -c $(s).cpp
 $(p):
 	g++ $(CFLAGS) -c $(p).cpp
-all: $(l) $(s) $(p)
-	g++ $(s).o $(p).o $(l).o -o $(l)
+all: $(p) $(s) $(l)
+	g++ $(p).o $(s).o $(l).o -o $(l)
 
 clean:
-	rm -rf *.o $(l)
+	rm -rf *.o 
+	rm -rf $(l)
 run: all 
 	./$(l)
