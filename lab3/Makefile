@@ -6,7 +6,7 @@ compile: lab3.cpp Star.h Planet.cpp Planet.h
 	
 
 all: lab3.cpp Star.h Planet.cpp Planet.h
-	g++ $(CFLAGS) -c Lab3.cpp -c Star.cpp -c Planet.cpp 
+	g++ $(CFLAGS) -c lab3.cpp -c Star.cpp -c Planet.cpp 
 	g++ lab3.o Planet.o Star.o -o lab3
 clean:
 	rm -rf *.o 
