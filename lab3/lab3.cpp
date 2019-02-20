@@ -10,7 +10,8 @@
 using namespace std;
 
 #define NUM_PLANETS_TO_TEST 500
-#ifdef h20
+#ifndef h20
+
 int main(){
     srand(time(NULL));
     int all_ids[NUM_PLANETS_TO_TEST] = {0};

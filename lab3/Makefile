@@ -2,16 +2,14 @@ CFLAGS = -Wall -Wextra -DDEBUG -g -std=c++14
 l = lab3
 s = Star
 p = Planet
-$(l):
-	g++ $(CFLAGS) -c $(l).cpp
-$(s): 
-	g++ $(CFLAGS) -c $(s).cpp
-$(p):
-	g++ $(CFLAGS) -c $(p).cpp
-all: $(l) $(s) $(p)
-	g++ $(s).o $(p).o $(l).o -o $(l)
+compile: lab3.cpp Star.h Planet.cpp Planet.h
+	
 
+all: lab3.cpp Star.h Planet.cpp Planet.h
+	g++ $(CFLAGS) -c Lab3.cpp -c Star.cpp -c Planet.cpp 
+	g++ lab3.o Planet.o Star.o -o lab3
 clean:
 	rm -rf *.o $(l)
 run: all 
 	./$(l)
+

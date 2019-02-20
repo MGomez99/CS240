@@ -1,9 +1,8 @@
+#ifndef SLAB3_MG
+#define SLAB3_MG
 #include <cstdlib>
 #include <iostream>
 #include "Planet.h"
-#ifndef SLAB3_MG
-#define SLAB3_MG
-
 
 class Star{
 	private:
@@ -14,11 +13,12 @@ class Star{
 		Star();
 		~Star();
 		int addPlanet();
-		Planet getFurthest();
+		//Planet getFurthest();
+		Planet * getPlanet(int);
+		bool removePlanet(int);
 		void orbit();
 		void printStarInfo();
 		int getCurrentNumPlanets(){return this->current_planets;}
-		int getMaxPlanets();
         //you may add any additional methodas you may need.
 };
 #endif
