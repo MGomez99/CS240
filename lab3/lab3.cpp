@@ -11,7 +11,10 @@ using namespace std;
 
 #define NUM_PLANETS_TO_TEST 500
 #ifndef h20
+<<<<<<< HEAD
 
+=======
+>>>>>>> 633422859072d3bcc0a291ef306f98e42b2f2adc
 int main(){
     srand(time(NULL));
     int all_ids[NUM_PLANETS_TO_TEST] = {0};
@@ -73,7 +76,6 @@ int main(){
 
 
     cerr << "\n\tTEST #5: Orbit Planets Still Works" << endl;
-
     //After calling orbit the planet's pos should be incremented by 1'
     for(int i = 0; i < NUM_PLANETS_TO_TEST; i++){
         Planet * temp = sun->getPlanet(all_ids[i]);
