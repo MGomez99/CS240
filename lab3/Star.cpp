@@ -17,12 +17,12 @@ int Star::addPlanet(){
     int current_num = this->current_planets;
     int distance = rand() % 3000; //RANDOM DISTANCE BETWEEN 1 and 3000
     Planet ** newSystem = new Planet*[current_num+1];
-    if(current_num != 0){
-        for(int i = 0; i < current_num; i++) { //copy old planets
-            newSystem[i] = this->planets[i];
-        }
-    }
-    Planet *p = new Planet(this->next_id, distance); //MAKE NEW PLANET
+    
+	for(int i = 0; i < current_num; i++) { //copy old planets
+		newSystem[i] = this->planets[i];
+	}
+    
+    Planet *p = new Planet(distance, this->next_id); //MAKE NEW PLANET
     
     newSystem[current_planets] = p; //Add planet to system and increment current
 	next_id++;//inc id to keep it unique
@@ -46,7 +46,7 @@ bool Star::removePlanet(int ID){
         }
         //planet hasn't been found yet, normal indexes
         else {
-            if(!removed){
+            if(!removed && i<current_planets-1){
                 newSystem[i] = this->planets[i];
             }
             //planet deleted, offset index to fill new system

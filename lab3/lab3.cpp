@@ -11,10 +11,6 @@ using namespace std;
 
 #define NUM_PLANETS_TO_TEST 500
 #ifndef h20
-<<<<<<< HEAD
-
-=======
->>>>>>> 633422859072d3bcc0a291ef306f98e42b2f2adc
 int main(){
     srand(time(NULL));
     int all_ids[NUM_PLANETS_TO_TEST] = {0};
